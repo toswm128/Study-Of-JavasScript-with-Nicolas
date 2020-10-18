@@ -23,5 +23,18 @@ const fri = "fri";
 console.log(mon,thu,wed,thu,fri);
 //array 안쓸경우
 const daysOfWeek = ["Mon","Tue","Wed","Thu","Fri",
-"Sat","Sun"];
+"Sat","Sun"]; 
 console.log(daysOfWeek[2]);
+
+const minsu ={
+    name:"Minsu",
+    age:17,
+    gender:"Male",
+    isHansome:true,
+    favMovies: ["Along the gods","LOTR","Oldboy"],
+    favFood: [{name : "Kimchi",fatty: false},{name:
+    "Cheese burger", fatty: true}]
+}
+console.log(minsu.age);
+console.log(minsu.favMovies[0]);
+console.log(minsu.favFood[1].name);
