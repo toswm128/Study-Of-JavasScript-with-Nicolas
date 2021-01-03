@@ -86,7 +86,27 @@
 
 const title= document.querySelector("#title");
 title.style.color="red";
-console.log(title);
+console.log(Math);
 document.title="hello~~"
 
 title.innerHTML="hi from js";
+
+let font=10;
+let cnt=0;
+function handleclick(event){
+    title.style.color = '#' + Math.round(Math.random() * 0xffffff).toString(16);
+    title.style.fontSize = `${font}px`;
+    if(font<1000 && cnt===0){
+        font= font+1;
+    }
+    else if(font>1){
+        font = font-1;
+        cnt=1;
+    }
+    else
+        cnt=0;
+    console.log(font);
+    }
+    
+    window.addEventListener("click", handleclick);
+    setInterval(handleclick,1)
