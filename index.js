@@ -119,21 +119,29 @@
 
 // window.addEventListener("resize", helloevent)
 
-const Base = "black";
-const Other = "red";
+// const Base = "black";
+// const Other = "red";
 
 
-function colorChange() {
-    const currentColor = title.style.color;
-    if(currentColor ===Base){
-        title.style.color = Other;
-    } else{
-        title.style.color = Base;
-    }
+// function colorChange() {
+//     const currentColor = title.style.color;
+//     if(currentColor ===Base){
+//         title.style.color = Other;
+//     } else{
+//         title.style.color = Base;
+//     }
+// }
+const CLICKED_CLASS = "clicked";
+const BACK = "back";
+
+function click(){
+    console.log("a");
+    title.classList.toggle(CLICKED_CLASS);
+    back.classList.toggle(BACK);
+
 }
 
 function  inint () {
-    title.style.color = Base;
-    title.addEventListener("wheel",colorChange);
+    title.addEventListener("click", click);
 }
 inint();

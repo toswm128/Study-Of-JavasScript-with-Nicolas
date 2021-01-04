@@ -1,7 +1,19 @@
 body{
-    background-color: blue;
+    background-color: black;
+    transition:  all 1s ease-in-out;
 }
 h1{
     color: white;
-    
+    transition:  color 1s ease-in-out;
+}
+.btn{
+    cursor: pointer;
+}
+
+.clicked{
+    color:  black;
+}
+
+.back{
+    background-color: white;
 }
