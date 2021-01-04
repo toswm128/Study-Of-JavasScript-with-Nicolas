@@ -113,8 +113,27 @@
 
 
 
-function helloevent(event) {
-    console.log(event)
+// function helloevent(event) {
+//     console.log(event)
+// }
+
+// window.addEventListener("resize", helloevent)
+
+const Base = "black";
+const Other = "red";
+
+
+function colorChange() {
+    const currentColor = title.style.color;
+    if(currentColor ===Base){
+        title.style.color = Other;
+    } else{
+        title.style.color = Base;
+    }
 }
 
-window.addEventListener("resize", helloevent)
+function  inint () {
+    title.style.color = Base;
+    title.addEventListener("wheel",colorChange);
+}
+inint();
