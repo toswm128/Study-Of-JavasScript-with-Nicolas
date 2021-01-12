@@ -5,8 +5,25 @@ const form = document.querySelector(".js-form"),
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing"
 
+function saveName(text){
+    localStorage.setItem(USER_LS,text);
+}
+
+function hendleSubmit(event){
+    event.preventDefault();
+    const currentValue = input.value;
+    paintGretting(currentValue);
+    saveName(currentValue);
+    console.log("hey")
+}
+
+function askForName(){
+    form.classList.add(SHOWING_CN);
+    form.addEventListener("submit" , hendleSubmit);
+}
+
 function paintGretting(text){
-    greeting.classList.remove(SHOWING_CN);
+    form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     greeting.innerHTML = `Hello ${text}`
 }
@@ -14,6 +31,7 @@ function paintGretting(text){
 function loadName(){
     const currentUser = localStorage.getItem(USER_LS);
     if(currentUser === null){
+        askForName();
     }else{
         paintGretting(currentUser);
     }
