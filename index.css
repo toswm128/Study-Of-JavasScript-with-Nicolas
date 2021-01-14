@@ -4,16 +4,93 @@
 
 
 body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
     background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 33vh auto 33vh;
+    grid-template-areas: 
+    ". . ."
+    ". main ."
+    ". . .";
 }
 
+.main{
+    grid-area: main;
+}
+
+.js-clock h1{
+    color: rgba( 255, 255, 255, 0.6 );
+    background-color: rgba( 0, 0, 0, 0.2 );
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.js-form{
+    display: flex;
+    justify-content: center;
+}
+.greetings{
+    margin: 0;
+    font-size: 2rem;
+    justify-content: center;
+}
 
 .form,
 .greetings{
     display: none;
 }
 .showing{
-    display: block;
+    display: flex;
+}
+
+.js-toDoForm{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    background-color: rgba( 0, 0, 0, 0);;
+    font-size: 1rem;
+    outline: none;
+    margin-top:1vh;
+    border: 0;
+    border-bottom: 1px solid white;
+    appearance: none;
+    
+}
+
+input:focus{
+    background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+.js-toDoList{
+    padding: 0;
+    background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+
+.js-toDoList li{
+    margin-top: 1vh;
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+button{
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: rgba( 0, 0, 0, 0 ); ;
+}
+
+.js-weather{
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes fadeIn{
@@ -33,3 +110,4 @@ body{
     z-index: -1;
     animation: fadeIn .5s linear;
 }
+

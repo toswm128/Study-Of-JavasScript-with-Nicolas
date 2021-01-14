@@ -14,7 +14,6 @@ function hendleSubmit(event){
     const currentValue = input.value;
     paintGretting(currentValue);
     saveName(currentValue);
-    console.log("hey")
 }
 
 function askForName(){
@@ -25,7 +24,7 @@ function askForName(){
 function paintGretting(text){
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerHTML = `Hello ${text}`
+    greeting.innerHTML = `안녕! "${text}"`
 }
 
 function loadName(){
